@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 class CardDeliveryTest {
 
     private String generateDate(int daysToAdd, String pattern) {
-        LocalDate today = LocalDate.of(2025, 11, 17); // Set the current date to 17.11.2025
+        LocalDate today = LocalDate.now();
         LocalDate futureDate = today.plusDays(daysToAdd);
         return futureDate.format(DateTimeFormatter.ofPattern(pattern));
     }
@@ -41,3 +41,4 @@ class CardDeliveryTest {
 
     }
 }
+
